@@ -133,14 +133,20 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Heat Reduction減少熱量 << <a href='Heat Reduction減少熱量.html'>Previous</a> <a href='Passive Air Cooling被動風冷.html'>Next</a> >> Passive Air Cooling被動風冷<br /><h1>Active Air Cooling主動風冷</h1>
-<p lang=""><span>Active air cooling components consist of a fan and a cooling plate (heat sink) made of aluminum or copper. A fan blows fresh air on a heat sink placed over the components that need to be cooled. The heat sink’s fins increase the surface of the metal plate and increase the heat exchange capabilities of the component. The fan blows the air between those fins, making the heat exchange quicker and more efficient, as it rapidly removes the heated air that is produced between the fins. There is only one drawback to active air cooling: the component that generates heat can never be cooled below the ambient room temperature. This is because active cooling uses forced air from the room, and the room air cannot cool a component to a lower temperature than the ambient temperature. These components are very reliable, and the cost of this system is quite affordable.</span></p>
-<p id="N106A2" lang=""><span>主動空氣冷卻組件由風扇和鋁或銅製成的冷卻板（散熱器）組成。風扇將新鮮空氣吹到放置在需要冷卻的組件上方的散熱器上。散熱器的散熱片增加了金屬板的表面，並增加了組件的熱交換能力。風扇在這些散熱片之間吹動空氣，從而使熱交換更快，更有效，因為它可以快速去除散熱片之間產生的熱空氣。主動空氣冷卻只有一個缺點：產生熱量的組件永遠無法冷卻到室溫以下。這是因為主動冷卻使用來自房間的強制空氣，並且房間空氣無法將組件冷卻到比環境溫度低的溫度。這些組件非常可靠，</span></p>
-</div>
-</div>
-<div class="section" id="N106A7">
-<div class="sectionContain">
-<br />Heat Reduction減少熱量 << <a href='Heat Reduction減少熱量.html'>Previous</a> <a href='Passive Air Cooling被動風冷.html'>Next</a> >> Passive Air Cooling被動風冷</div>
+    <div id="tipue_search_content">Libraries << <a href='Libraries.html'>Previous</a> <a href='BeautifulSoup.html'>Next</a> >> BeautifulSoup<br /><h1>Requests</h1>
+<p>One of the most useful libraries written for Python recently,<span> </span><a href="http://docs.python-requests.org/en/latest/">requests</a><span> </span>does “HTTP for humans.” What this means in laymen’s terms is that it asks the internet things from Python. When you type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, you are asking the internet to show you Facebook’s homepage.</p>
+<p>In the same way, a program can ask the internet something. It might not be “show me Facebook”, but you can for example ask Github for a list of all the repositories that the user “mprat” has. You can do this with an API (Application Programming Interface). This exercise doesn’t use APIs, so we’ll talk more about those in a later post.</p>
+<p>Back to showing the user a webpage. When I type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, Facebook sends my browser a bunch of HTML (basically, code for how the website looks). The browser then takes this HTML and shows it to me in a pretty way. (Fun fact: to see the HTML of any page in a browser, right click on the page and “Inspect Element” or “View Source” depending on your browser. In Chrome, “Inspect Element” will pop up a module at the bottom of your page where you can see the HTML from the page. This trick will come in handy when you’re doing the exercise. If you need to DO anything with this HTML, better to use a program. More posts about this coming later.) If I want to “see” a webpage with a program, all I need to do is ask it for it’s HTML and read it.</p>
+<p>The ‘requests’ library does half of that job: it asks (requests, if you will) a server for information. This could be just data (through an API - more later) or in the case of this exercise, HTML.</p>
+<p>Look at the<span> </span><a href="http://docs.python-requests.org/en/latest/">documentation</a><span> </span>for all the details you need. In this particular latest version, all you need to do to ask a website for it’s HTML is:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">requests</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="s">'<a class="vglnk" href="http://github.com/" rel="nofollow"><span>http</span><span>://</span><span>github</span><span>.</span><span>com</span></a>'</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="n">r_html</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span></code></pre>
+</figure>
+<p>Now inside the variable<span> </span><code class="highlighter-rouge">r_html</code>, you have the HTML of the page as a string. Reading (otherwise called<span> </span><strong>parsing</strong>) happens with a different Python package.</p>
+<br />Libraries << <a href='Libraries.html'>Previous</a> <a href='BeautifulSoup.html'>Next</a> >> BeautifulSoup</div>
         
     <!-- footer -->
       <div class="container">

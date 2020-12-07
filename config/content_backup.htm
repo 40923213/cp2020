@@ -108,6 +108,52 @@
 <p id="N106A6" lang=""><span><span>紅色機箱風扇。</span><span>照片由"<a href="https://flic.kr/p/AEv4V" id="_i_1" lang="" target="_blank">Airplane Lane</a>"</span></span><span><span>根據CC-BY許可使用</span><span>。</span></span></p>
 <h1>HW2</h1>
 <h1>HW3</h1>
+<br/>Decode A Web Page<span> </span>
+<p>This is the first 4-chili exercise of this blog! We’ll see what people think, and decide whether or not to continue with 4-chili exercises in the future.</p>
+<br/>Exercise 17 (and<span> </span><a href="https://www.practicepython.org/solution/2014/07/10/17-decode-a-web-page-solutions.html">Solution</a>)
+<p>Use the<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>and<span> </span><code class="highlighter-rouge">requests</code><span> </span>Python packages to print out a list of all the article titles on the<span> </span><a href="http://www.nytimes.com/">New York Times homepage</a>.</p>
+<h3 id="discussion">Discussion</h3>
+<p>Concepts for this week:</p>
+<ul>
+<li>Libraries</li>
+<li><code class="highlighter-rouge">requests</code></li>
+<li><code class="highlighter-rouge">BeautifulSoup</code></li>
+</ul>
+<h3 id="libraries">Libraries</h3>
+<p>Many people have written libraries in Python that do not come with the standard distribution of Python (like the<span> </span><code class="highlighter-rouge">random</code><span> </span>library mentioned<span> </span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">in a previous post</a>). These libraries can do anything from machine learning to date and time formatting to meme generation. If you have a task you need done, most likely someone has written a library for it.</p>
+<p>There are three main things to keep in mind when using a library:</p>
+<ol>
+<li>You need to install it. Installation in GNU/Linux based systems will generally be easier than on Windows or OSX, but there will always be documentation for how to do it.</li>
+<li>You need to import it. At the top of your program, make sure you write the line<span> </span><code class="highlighter-rouge">import requests</code>, or whatever the name of your library is. Then you can use it to your heart’s content.</li>
+<li>You need to read documentation. Someone else wrote it, so the rules might not be so obvious. Anyone (or any group) that writes a Python package writes documentation for it. Eventually, reading documentation will become second nature.</li>
+</ol>
+<h3 id="requests">Requests</h3>
+<p>One of the most useful libraries written for Python recently,<span> </span><a href="http://docs.python-requests.org/en/latest/">requests</a><span> </span>does “HTTP for humans.” What this means in laymen’s terms is that it asks the internet things from Python. When you type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, you are asking the internet to show you Facebook’s homepage.</p>
+<p>In the same way, a program can ask the internet something. It might not be “show me Facebook”, but you can for example ask Github for a list of all the repositories that the user “mprat” has. You can do this with an API (Application Programming Interface). This exercise doesn’t use APIs, so we’ll talk more about those in a later post.</p>
+<p>Back to showing the user a webpage. When I type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, Facebook sends my browser a bunch of HTML (basically, code for how the website looks). The browser then takes this HTML and shows it to me in a pretty way. (Fun fact: to see the HTML of any page in a browser, right click on the page and “Inspect Element” or “View Source” depending on your browser. In Chrome, “Inspect Element” will pop up a module at the bottom of your page where you can see the HTML from the page. This trick will come in handy when you’re doing the exercise. If you need to DO anything with this HTML, better to use a program. More posts about this coming later.) If I want to “see” a webpage with a program, all I need to do is ask it for it’s HTML and read it.</p>
+<p>The ‘requests’ library does half of that job: it asks (requests, if you will) a server for information. This could be just data (through an API - more later) or in the case of this exercise, HTML.</p>
+<p>Look at the<span> </span><a href="http://docs.python-requests.org/en/latest/">documentation</a><span> </span>for all the details you need. In this particular latest version, all you need to do to ask a website for it’s HTML is:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">requests</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="s">'<a class="vglnk" href="http://github.com/" rel="nofollow"><span>http</span><span>://</span><span>github</span><span>.</span><span>com</span></a>'</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="n">r_html</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span></code></pre>
+</figure>
+<p>Now inside the variable<span> </span><code class="highlighter-rouge">r_html</code>, you have the HTML of the page as a string. Reading (otherwise called<span> </span><strong>parsing</strong>) happens with a different Python package.</p>
+<h3 id="beautifulsoup">BeautifulSoup</h3>
+<p>To solve our problem of parsing (reading, understanding, interpreting) the string of HTML we got from<span> </span><code class="highlighter-rouge">requests</code>, we use the<span> </span><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><code class="highlighter-rouge">BeautifulSoup</code></a><span> </span>library.</p>
+<p>What it does is give a<span> </span><em>hierarchical</em><span> </span>(a pyramid structure) to the HTML in the document. If you don’t know anything about HTML, the<span> </span><a href="http://en.wikipedia.org/wiki/HTML">Wikipedia</a><span> </span>article is a good summary. For the purposes of this exercise, you don’t need to know anything about HTML beyond being able to look at it quickly.</p>
+<p>Because<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>takes care of interpreting our HTML for us, we can ask it things like: “give me all the lines with<span> </span><code class="highlighter-rouge">&lt;p&gt;</code><span> </span>tags” or “find me the parent element to the<span> </span><code class="highlighter-rouge">&lt;title&gt;</code><span> </span>element”, etc.</p>
+<p>Your code would look something like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+  <span class="c"># some requests code here for getting r_html </span>
+
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r_html</span><span class="p">)</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'span'</span><span class="p">,</span> <span class="s">'articletitle'</span><span class="p">)</span><span class="o">.</span><span class="n">string</span></code></pre>
+</figure>
+<p>And you can do many more things in<span> </span><code class="highlighter-rouge">BeautifulSoup</code>, but I will leave you to explore those by yourself or through other later exercises.</p>
 </div>
 </div>
 </div>
