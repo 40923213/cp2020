@@ -108,31 +108,46 @@
 <p id="N106A6" lang=""><span><span>紅色機箱風扇。</span><span>照片由"<a href="https://flic.kr/p/AEv4V" id="_i_1" lang="" target="_blank">Airplane Lane</a>"</span></span><span><span>根據CC-BY許可使用</span><span>。</span></span></p>
 <h1>HW2</h1>
 <h1>HW3 </h1>
-<h2>Decode A Web Page</h2>
+<h2>17.Decode A Web Page 網站解碼</h2>
 <p>This is the first 4-chili exercise of this blog! We’ll see what people think, and decide whether or not to continue with 4-chili exercises in the future.</p>
-<h3>Exercise 17(and Solution)</h3>
+<p><span>這是此部落格的第一個4個辣椒練習！</span><span>我們將看看人們的想法，並決定將來是否繼續進行4個辣椒練習。</span></p>
+<h3>Exercise 17(and Solution) 練習17(跟解決方法)</h3>
 <p>Use the<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>and<span> </span><code class="highlighter-rouge">requests</code><span> </span>Python packages to print out a list of all the article titles on the<span> </span><a href="http://www.nytimes.com/">New York Times homepage</a>.</p>
-<h3 id="discussion">Discussion</h3>
+<p><span>使用</span><code class="highlighter-rouge">BeautifulSoup</code><span><span>和</span></span><code class="highlighter-rouge">requests</code><span><span>Python軟件包在</span></span><span><span><a href="http://www.nytimes.com/">《紐約時報》主頁</a> </span></span><span><span>上打印出所有文章標題的列表</span><span>。</span></span></p>
+<h3 id="discussion">Discussion 討論</h3>
 <p>Concepts for this week:</p>
+<p>本周的概念:</p>
 <ul>
 <li>Libraries</li>
 <li><code class="highlighter-rouge">requests</code></li>
 <li><code class="highlighter-rouge">BeautifulSoup</code></li>
 </ul>
-<h3 id="libraries">Libraries</h3>
-<p>Many people have written libraries in Python that do not come with the standard distribution of Python (like the<span> </span><code class="highlighter-rouge">random</code><span> </span>library mentioned<span> </span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">in a previous post</a>). These libraries can do anything from machine learning to date and time formatting to meme generation. If you have a task you need done, most likely someone has written a library for it.</p>
+<h3 id="libraries">Libraries 軟件庫</h3>
+<p>Many people have written libraries in Python that do not come with the standard distribution of Python (like the<span> </span><code class="highlighter-rouge">random</code><span> </span>library mentioned<span> in a previous post</span>). These libraries can do anything from machine learning to date and time formatting to meme generation. If you have a task you need done, most likely someone has written a library for it.</p>
+<p><span>許多人都使用Python編寫了一些庫，這些庫不是Python的標準發行版所附帶的（例如上一篇文章中</span><code class="highlighter-rouge">random</code><span><span>提到</span><span>的</span><span>庫</span><span>）。</span><span>這些庫可以執行從機器學習到日期和時間格式化到模因生成的所有操作。</span><span>如果您有需要完成的任務，很可能有人為它編寫了一個軟件庫。</span></span></p>
 <p>There are three main things to keep in mind when using a library:</p>
 <ol>
 <li>You need to install it. Installation in GNU/Linux based systems will generally be easier than on Windows or OSX, but there will always be documentation for how to do it.</li>
 <li>You need to import it. At the top of your program, make sure you write the line<span> </span><code class="highlighter-rouge">import requests</code>, or whatever the name of your library is. Then you can use it to your heart’s content.</li>
 <li>You need to read documentation. Someone else wrote it, so the rules might not be so obvious. Anyone (or any group) that writes a Python package writes documentation for it. Eventually, reading documentation will become second nature.</li>
 </ol>
-<h3 id="requests">Requests</h3>
-<p>One of the most useful libraries written for Python recently,<span> </span><a href="http://docs.python-requests.org/en/latest/">requests</a><span> </span>does “HTTP for humans.” What this means in laymen’s terms is that it asks the internet things from Python. When you type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, you are asking the internet to show you Facebook’s homepage.</p>
+<p><span>使用軟件庫時，要牢記三件事：</span></p>
+<ol>
+<li><span><span>您需要安裝它。</span><span>與基於Windows或OSX的系統相比，在基於GNU / Linux的系統上的安裝通常會更容易，但是始終會有有關如何執行此操作的文檔。</span></span></li>
+<li><span><span>您需要導入它。</span><span>在程序的頂部，確保您編寫了line</span></span><code class="highlighter-rouge">import requests</code><span><span>或庫的名稱。</span><span>然後，您可以使用它來滿足您的需求。</span></span></li>
+<li><span><span>您需要閱讀文檔。</span><span>有人寫的，所以規則可能不那麼明顯。</span><span>編寫Python程序包的任何人（或任何小組）都會為其編寫文檔。</span><span>最終，閱讀文檔將成為第二天性。</span></span><span><span></span></span></li>
+</ol>
+<h3>Requests 要求</h3>
+<p>One of the most useful libraries written for Python recently,<span>request</span><span> </span>does “HTTP for humans.” What this means in laymen’s terms is that it asks the internet things from Python. When you type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, you are asking the internet to show you Facebook’s homepage.</p>
+<p><span>最近，為Python編寫的最有用的庫之一就是請求</span><span><span>執行“人類HTTP”。</span><span>用外行的話來說，這意味著它向Python詢問互聯網問題。</span><span>當您鍵入“<span><a class="vglnk" href="http://facebook.com/" rel="nofollow">facebook.com</a></span></span></span><span><span>”進入瀏覽器，您正在要求互聯網顯示您的Facebook主頁。</span></span></p>
 <p>In the same way, a program can ask the internet something. It might not be “show me Facebook”, but you can for example ask Github for a list of all the repositories that the user “mprat” has. You can do this with an API (Application Programming Interface). This exercise doesn’t use APIs, so we’ll talk more about those in a later post.</p>
+<p><span>同樣，程序可以向互聯網詢問一些信息。</span><span>它可能不是“向我顯示Facebook”，但是例如，您可以要求Github提供用戶“mprat”擁有的所有存儲庫的列表。</span><span>您可以使用API（應用程序編程接口）來執行此操作。</span><span>本練習不使用APIs，因此我們將在以後的文章中進一步討論。</span></p>
 <p>Back to showing the user a webpage. When I type “<a class="vglnk" href="http://facebook.com/" rel="nofollow"><span>facebook</span><span>.</span><span>com</span></a>” into the browser, Facebook sends my browser a bunch of HTML (basically, code for how the website looks). The browser then takes this HTML and shows it to me in a pretty way. (Fun fact: to see the HTML of any page in a browser, right click on the page and “Inspect Element” or “View Source” depending on your browser. In Chrome, “Inspect Element” will pop up a module at the bottom of your page where you can see the HTML from the page. This trick will come in handy when you’re doing the exercise. If you need to DO anything with this HTML, better to use a program. More posts about this coming later.) If I want to “see” a webpage with a program, all I need to do is ask it for it’s HTML and read it.</p>
+<p><span>回到向用戶顯示網頁。當我輸入“<a class="vglnk" href="http://facebook.com/" rel="nofollow">facebook.com</a></span><span><span>”進入瀏覽器，Facebook向我的瀏覽器發送了一堆HTML（基本上是有關網站外觀的代碼）。</span><span>然後瀏覽器將這個HTML並以漂亮的方式顯示給我。</span><span>（有趣的事實：要在瀏覽器中查看任何頁面的HTML，請右鍵單擊該頁面，然後根據您的瀏覽器單擊“檢查元素”或“查看代源碼”。在Chrome中，“檢查元素”將在底部彈出一個模塊您可以在頁面的其中看到HTML。如果您需要使用此HTML做任何事情，最好使用一個程序。）如果我想“查看”帶有程序的網頁，我所要做的就是向其索要HTML並閱讀它。</span></span></p>
 <p>The ‘requests’ library does half of that job: it asks (requests, if you will) a server for information. This could be just data (through an API - more later) or in the case of this exercise, HTML.</p>
+<p><span>“請求”軟件庫完成了一半的工作：它向服務器請求（如果需要的話）信息。</span><span>這可能只是數據（通過API-稍後介紹），或者在本練習中為HTML。</span></p>
 <p>Look at the<span> </span><a href="http://docs.python-requests.org/en/latest/">documentation</a><span> </span>for all the details you need. In this particular latest version, all you need to do to ask a website for it’s HTML is:</p>
+<p><span>查看</span><a href="http://docs.python-requests.org/en/latest/"><span><span>文檔</span></span></a><span><span>以獲取所需的所有詳細信息。</span><span>在此特定的最新版本中，向網站詢問其HTML所需要做的就是：</span></span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">requests</span>
   <span class="n">url</span> <span class="o">=</span> <span class="s">'<a class="vglnk" href="http://github.com/" rel="nofollow"><span>http</span><span>://</span><span>github</span><span>.</span><span>com</span></a>'</span>
@@ -140,6 +155,7 @@
   <span class="n">r_html</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span></code></pre>
 </figure>
 <p>Now inside the variable<span> </span><code class="highlighter-rouge">r_html</code>, you have the HTML of the page as a string. Reading (otherwise called<span> </span><strong>parsing</strong>) happens with a different Python package.</p>
+<p><span>現在，在變量中</span><code class="highlighter-rouge">r_html</code><span>，您將頁面的HTML作為字符串。讀取（否則稱為</span><strong><span>parsing</span></strong><span>）發生在另一個Python包中。</span></p>
 <h3 id="beautifulsoup">BeautifulSoup</h3>
 <p>To solve our problem of parsing (reading, understanding, interpreting) the string of HTML we got from<span> </span><code class="highlighter-rouge">requests</code>, we use the<span> </span><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><code class="highlighter-rouge">BeautifulSoup</code></a><span> </span>library.</p>
 <p>What it does is give a<span> </span><em>hierarchical</em><span> </span>(a pyramid structure) to the HTML in the document. If you don’t know anything about HTML, the<span> </span><a href="http://en.wikipedia.org/wiki/HTML">Wikipedia</a><span> </span>article is a good summary. For the purposes of this exercise, you don’t need to know anything about HTML beyond being able to look at it quickly.</p>

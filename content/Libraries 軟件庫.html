@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='Overview總覽.html'>Overview總覽</a><li><a href='Heat Sources熱源.html'>Heat Sources熱源</a><li><a href='Heat Effects熱效應.html'>Heat Effects熱效應</a><li><a href='Heat Reduction減少熱量.html'>Heat Reduction減少熱量</a><li><a href='Active Air Cooling主動風冷.html'>Active Air Cooling主動風冷</a><li><a href='Passive Air Cooling被動風冷.html'>Passive Air Cooling被動風冷</a><li><a href='Liquid Cooling液體冷卻.html'>Liquid Cooling液體冷卻</a><li><a href='CPU Cooling CPU散熱.html'>CPU Cooling CPU散熱</a><li><a href='Case Fans機箱風扇.html'>Case Fans機箱風扇</a></li></ul><li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='Decode A Web Page.html'>Decode A Web Page</a><ul class='dropdown'><li><a href='Exercise 17(and Solution).html'>Exercise 17(and Solution)</a><li><a href='Discussion.html'>Discussion</a><li><a href='Libraries.html'>Libraries</a><li><a href='Requests.html'>Requests</a><li><a href='BeautifulSoup.html'>BeautifulSoup</a></li>
+                     <li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='Overview總覽.html'>Overview總覽</a><li><a href='Heat Sources熱源.html'>Heat Sources熱源</a><li><a href='Heat Effects熱效應.html'>Heat Effects熱效應</a><li><a href='Heat Reduction減少熱量.html'>Heat Reduction減少熱量</a><li><a href='Active Air Cooling主動風冷.html'>Active Air Cooling主動風冷</a><li><a href='Passive Air Cooling被動風冷.html'>Passive Air Cooling被動風冷</a><li><a href='Liquid Cooling液體冷卻.html'>Liquid Cooling液體冷卻</a><li><a href='CPU Cooling CPU散熱.html'>CPU Cooling CPU散熱</a><li><a href='Case Fans機箱風扇.html'>Case Fans機箱風扇</a></li></ul><li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='17.Decode A Web Page 網站解碼.html'>17.Decode A Web Page 網站解碼</a><ul class='dropdown'><li><a href='Exercise 17(and Solution) 練習17(跟解決方法).html'>Exercise 17(and Solution) 練習17(跟解決方法)</a><li><a href='Discussion 討論.html'>Discussion 討論</a><li><a href='Libraries 軟件庫.html'>Libraries 軟件庫</a><li><a href='Requests 要求.html'>Requests 要求</a><li><a href='BeautifulSoup.html'>BeautifulSoup</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,9 +133,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Decode A Web Page << <a href='Decode A Web Page.html'>Previous</a> <a href='Discussion.html'>Next</a> >> Discussion<br /><h1>Exercise 17(and Solution)</h1>
-<p>Use the<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>and<span> </span><code class="highlighter-rouge">requests</code><span> </span>Python packages to print out a list of all the article titles on the<span> </span><a href="http://www.nytimes.com/">New York Times homepage</a>.</p>
-<br />Decode A Web Page << <a href='Decode A Web Page.html'>Previous</a> <a href='Discussion.html'>Next</a> >> Discussion</div>
+    <div id="tipue_search_content">Discussion 討論 << <a href='Discussion 討論.html'>Previous</a> <a href='Requests 要求.html'>Next</a> >> Requests 要求<br /><h1>Libraries 軟件庫</h1>
+<p>Many people have written libraries in Python that do not come with the standard distribution of Python (like the<span> </span><code class="highlighter-rouge">random</code><span> </span>library mentioned<span> in a previous post</span>). These libraries can do anything from machine learning to date and time formatting to meme generation. If you have a task you need done, most likely someone has written a library for it.</p>
+<p><span>許多人都使用Python編寫了一些庫，這些庫不是Python的標準發行版所附帶的（例如上一篇文章中</span><code class="highlighter-rouge">random</code><span><span>提到</span><span>的</span><span>庫</span><span>）。</span><span>這些庫可以執行從機器學習到日期和時間格式化到模因生成的所有操作。</span><span>如果您有需要完成的任務，很可能有人為它編寫了一個軟件庫。</span></span></p>
+<p>There are three main things to keep in mind when using a library:</p>
+<ol>
+<li>You need to install it. Installation in GNU/Linux based systems will generally be easier than on Windows or OSX, but there will always be documentation for how to do it.</li>
+<li>You need to import it. At the top of your program, make sure you write the line<span> </span><code class="highlighter-rouge">import requests</code>, or whatever the name of your library is. Then you can use it to your heart’s content.</li>
+<li>You need to read documentation. Someone else wrote it, so the rules might not be so obvious. Anyone (or any group) that writes a Python package writes documentation for it. Eventually, reading documentation will become second nature.</li>
+</ol>
+<p><span>使用軟件庫時，要牢記三件事：</span></p>
+<ol>
+<li><span><span>您需要安裝它。</span><span>與基於Windows或OSX的系統相比，在基於GNU / Linux的系統上的安裝通常會更容易，但是始終會有有關如何執行此操作的文檔。</span></span></li>
+<li><span><span>您需要導入它。</span><span>在程序的頂部，確保您編寫了line</span></span><code class="highlighter-rouge">import requests</code><span><span>或庫的名稱。</span><span>然後，您可以使用它來滿足您的需求。</span></span></li>
+<li><span><span>您需要閱讀文檔。</span><span>有人寫的，所以規則可能不那麼明顯。</span><span>編寫Python程序包的任何人（或任何小組）都會為其編寫文檔。</span><span>最終，閱讀文檔將成為第二天性。</span></span><span><span></span></span></li>
+</ol>
+<br />Discussion 討論 << <a href='Discussion 討論.html'>Previous</a> <a href='Requests 要求.html'>Next</a> >> Requests 要求</div>
         
     <!-- footer -->
       <div class="container">
