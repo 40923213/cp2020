@@ -133,22 +133,45 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Discussion 討論 << <a href='Discussion 討論.html'>Previous</a> <a href='Requests 要求.html'>Next</a> >> Requests 要求<br /><h1>Libraries 軟件庫</h1>
-<p>Many people have written libraries in Python that do not come with the standard distribution of Python (like the<span> </span><code class="highlighter-rouge">random</code><span> </span>library mentioned<span> in a previous post</span>). These libraries can do anything from machine learning to date and time formatting to meme generation. If you have a task you need done, most likely someone has written a library for it.</p>
-<p><span>許多人都使用Python編寫了一些庫，這些庫不是Python的標準發行版所附帶的（例如上一篇文章中</span><code class="highlighter-rouge">random</code><span><span>提到</span><span>的</span><span>庫</span><span>）。</span><span>這些庫可以執行從機器學習到日期和時間格式化到模因生成的所有操作。</span><span>如果您有需要完成的任務，很可能有人為它編寫了一個軟件庫。</span></span></p>
-<p>There are three main things to keep in mind when using a library:</p>
+    <div id="tipue_search_content">Exercise 18(And Solution) << <a href='Exercise 18(And Solution).html'>Previous</a> <br /><h1>Main method</h1>
+<p>Since we have covered randomness and functions, we still need to cover the idea of a “main” method. If you have programmed before, you will wonder why you haven’t needed a main method so far in your Python code.</p>
+<p>First, here is how you do it:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span> <span class="o">*</span> <span class="n">num</span>
+
+  <span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">user_num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number: "</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">num</span><span class="p">))</span></code></pre>
+</figure>
+<p>Note that in both<span> </span><code class="highlighter-rouge">__name__</code><span> </span>and<span> </span><code class="highlighter-rouge">__main__</code>, there are TWO underscore (<code class="highlighter-rouge">_</code>) characters.</p>
+<p>If you run this program, it behaves as expected: asking the use for a number and printing out the square in return. However, you might be wondering - how is this different from the way we’ve been writing programs until this point?</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span> <span class="o">*</span> <span class="n">num</span>
+
+  <span class="n">user_num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number: "</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">num</span><span class="p">))</span></code></pre>
+</figure>
+<p>You are correct if you think the second example will have THE SAME BEHAVIOR as in the first case. At least the way we’ve been running Python files until this point. I will attempt to explain.</p>
+<p>Python does not have a specified entry point like many other languages (for example, C++ always looks for a<span> </span><code class="highlighter-rouge">void main()</code><span> </span>method to run). Python files and programs are executed line by line by the Python interpreter, from however the Python file or program is run. When the definition of a function is reached by the interpreter, the function is not run, but rather loaded to be run later. (We discussed this when we talked about functions in a<span> </span><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html">previous post</a>.) Whatever is written outside of a function will get executed immediately - this includes creating variables and calling the functions that were previously loaded.</p>
+<p>There are (most commonly) two ways to run a Python file:</p>
 <ol>
-<li>You need to install it. Installation in GNU/Linux based systems will generally be easier than on Windows or OSX, but there will always be documentation for how to do it.</li>
-<li>You need to import it. At the top of your program, make sure you write the line<span> </span><code class="highlighter-rouge">import requests</code>, or whatever the name of your library is. Then you can use it to your heart’s content.</li>
-<li>You need to read documentation. Someone else wrote it, so the rules might not be so obvious. Anyone (or any group) that writes a Python package writes documentation for it. Eventually, reading documentation will become second nature.</li>
+<li>“Just running it” (which you can do from the terminal, through the “Run” button in IDLE, etc.)</li>
+<li>Importing the file as a module</li>
 </ol>
-<p><span>使用軟件庫時，要牢記三件事：</span></p>
-<ol>
-<li><span><span>您需要安裝它。</span><span>與基於Windows或OSX的系統相比，在基於GNU / Linux的系統上的安裝通常會更容易，但是始終會有有關如何執行此操作的文檔。</span></span></li>
-<li><span><span>您需要導入它。</span><span>在程序的頂部，確保您編寫了line</span></span><code class="highlighter-rouge">import requests</code><span><span>或庫的名稱。</span><span>然後，您可以使用它來滿足您的需求。</span></span></li>
-<li><span><span>您需要閱讀文檔。</span><span>有人寫的，所以規則可能不那麼明顯。</span><span>編寫Python程序包的任何人（或任何小組）都會為其編寫文檔。</span><span>最終，閱讀文檔將成為第二天性。</span></span><span><span></span></span></li>
-</ol>
-<br />Discussion 討論 << <a href='Discussion 討論.html'>Previous</a> <a href='Requests 要求.html'>Next</a> >> Requests 要求</div>
+<p>The first way is the way that you most likely have been using if you have been doing the exercises in this blog. If you have many files in a large project, this is how you run the “entry point” file in the project.</p>
+<p>The second way is more subtle: it is what happens when you write an<span> </span><code class="highlighter-rouge">import</code><span> </span>statement at the top of your file. In this exercise for example, you need to<span> </span><code class="highlighter-rouge">import random</code><span> </span>into your program to use the random module. Somewhere on your computer there is a file (or a group of Python files) that make up the<span> </span><code class="highlighter-rouge">random</code><span> </span>module, and in the process of importing them, what you are actually doing is running the file(s) from that module.</p>
+<p>When you have functions defined inside a file (with the<span> </span><code class="highlighter-rouge">def</code><span> </span>keyword, like the<span> </span><code class="highlighter-rouge">def square</code><span> </span>function above) and run a file, the function is not immediately run. You can think what happens is the function is stored for future use.</p>
+<p>Anything else in the file - variables created, functions that are called, operations done, etc - are executed immediately when a Python file is run.</p>
+<p>However, in the case where you are importing a Python file into another, you want to load all of the functions without creating variables or executing any functions. You just want to load them to use them later. How do you reconcile this problem? With the<span> </span><code class="highlighter-rouge">if __name__=="__main__"</code><span> </span>statement. Create your variables and all your functions inside this statement, and when you import your file into another, it will not mess up your program by creating variables or calling functions.</p>
+<p>What the<span> </span><code class="highlighter-rouge">if __name__=="__main__"</code><span> </span>statement from above does is ensure that variables that are created, functions that are called, operations that are done, etc ONLY when you directly run the file, not when you import it into another.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><br />Exercise 18(And Solution) << <a href='Exercise 18(And Solution).html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">

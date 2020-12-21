@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='Overview總覽.html'>Overview總覽</a><li><a href='Heat Sources熱源.html'>Heat Sources熱源</a><li><a href='Heat Effects熱效應.html'>Heat Effects熱效應</a><li><a href='Heat Reduction減少熱量.html'>Heat Reduction減少熱量</a><li><a href='Active Air Cooling主動風冷.html'>Active Air Cooling主動風冷</a><li><a href='Passive Air Cooling被動風冷.html'>Passive Air Cooling被動風冷</a><li><a href='Liquid Cooling液體冷卻.html'>Liquid Cooling液體冷卻</a><li><a href='CPU Cooling CPU散熱.html'>CPU Cooling CPU散熱</a><li><a href='Case Fans機箱風扇.html'>Case Fans機箱風扇</a></li></ul><li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='17.Decode A Web Page 網站解碼.html'>17.Decode A Web Page 網站解碼</a><ul class='dropdown'><li><a href='Exercise 17(and Solution) 練習17(跟解決方法).html'>Exercise 17(and Solution) 練習17(跟解決方法)</a><li><a href='Discussion 討論.html'>Discussion 討論</a><li><a href='Libraries 軟件庫.html'>Libraries 軟件庫</a><li><a href='Requests 要求.html'>Requests 要求</a><li><a href='BeautifulSoup.html'>BeautifulSoup</a></li>
+                     <li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='Overview總覽.html'>Overview總覽</a><li><a href='Heat Sources熱源.html'>Heat Sources熱源</a><li><a href='Heat Effects熱效應.html'>Heat Effects熱效應</a><li><a href='Heat Reduction減少熱量.html'>Heat Reduction減少熱量</a><li><a href='Active Air Cooling主動風冷.html'>Active Air Cooling主動風冷</a><li><a href='Passive Air Cooling被動風冷.html'>Passive Air Cooling被動風冷</a><li><a href='Liquid Cooling液體冷卻.html'>Liquid Cooling液體冷卻</a><li><a href='CPU Cooling CPU散熱.html'>CPU Cooling CPU散熱</a><li><a href='Case Fans機箱風扇.html'>Case Fans機箱風扇</a></li></ul><li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='17.Decode A Web Page 網站解碼.html'>17.Decode A Web Page 網站解碼</a><ul class='dropdown'><li><a href='Exercise 17(and Solution) 練習17(跟解決方法).html'>Exercise 17(and Solution) 練習17(跟解決方法)</a><li><a href='Discussion 討論.html'>Discussion 討論</a><li><a href='Libraries 軟件庫.html'>Libraries 軟件庫</a><li><a href='Requests 要求.html'>Requests 要求</a><li><a href='BeautifulSoup.html'>BeautifulSoup</a></li></ul><li class='has-children'><a href='Cows And Bulls.html'>Cows And Bulls</a><ul class='dropdown'><li><a href='Exercise 18(And Solution).html'>Exercise 18(And Solution)</a><li><a href='Main method.html'>Main method</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,11 +133,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Requests 要求 << <a href='Requests 要求.html'>Previous</a> <br /><h1>BeautifulSoup</h1>
+    <div id="tipue_search_content">Requests 要求 << <a href='Requests 要求.html'>Previous</a> <a href='Cows And Bulls.html'>Next</a> >> Cows And Bulls<br /><h1>BeautifulSoup</h1>
 <p>To solve our problem of parsing (reading, understanding, interpreting) the string of HTML we got from<span> </span><code class="highlighter-rouge">requests</code>, we use the<span> </span><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><code class="highlighter-rouge">BeautifulSoup</code></a><span> </span>library.</p>
+<p><span>為了解決解析（讀取，理解，解釋）從中獲得的HTML字符串的問題</span><code class="highlighter-rouge">requests</code><span><span>，我們使用了</span></span><code class="highlighter-rouge"><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>軟件</code><span><span>庫。</span></span></p>
 <p>What it does is give a<span> </span><em>hierarchical</em><span> </span>(a pyramid structure) to the HTML in the document. If you don’t know anything about HTML, the<span> </span><a href="http://en.wikipedia.org/wiki/HTML">Wikipedia</a><span> </span>article is a good summary. For the purposes of this exercise, you don’t need to know anything about HTML beyond being able to look at it quickly.</p>
+<p><span>它的作用是為文檔中的HTML提供</span><em><span><span>分層結構</span></span></em><span><span>（金字塔結構）。</span><span>如果您對HTML一無所知，請參閱</span></span><a href="http://en.wikipedia.org/wiki/HTML"><span><span>Wikipedia</span></span></a><span><span>文章。</span><span>出於本練習的目的，除了能夠快速查看HTML外，你無需了解其他任何有關HTML的知識。</span></span></p>
 <p>Because<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>takes care of interpreting our HTML for us, we can ask it things like: “give me all the lines with<span> </span><code class="highlighter-rouge">&lt;p&gt;</code><span> </span>tags” or “find me the parent element to the<span> </span><code class="highlighter-rouge">&lt;title&gt;</code><span> </span>element”, etc.</p>
+<p><span>因為</span><code class="highlighter-rouge">BeautifulSoup</code><span><span>要為我們解釋HTML，所以我們可以提出類似的要求：“給我所有帶</span></span><code class="highlighter-rouge">&lt;p&gt;</code><span><span>標籤</span><span>的行</span><span>”或“為元素找到父</span></span><code class="highlighter-rouge">&lt;title&gt;</code><span><span>元素”.......等等。</span></span></p>
 <p>Your code would look something like this:</p>
+<p><span>您的代碼如下所示：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 
@@ -162,13 +166,8 @@ img.add_border {
 <div class="sectionContain">
 <div class="section" id="liquid_cooling">
 <div class="sectionContain">
-<div class="example clearfix"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><br />Requests 要求 << <a href='Requests 要求.html'>Previous</a> </div>
+<div class="example clearfix"><span>您可以在中進行更多操作</span><code class="highlighter-rouge">BeautifulSoup</code><span><span>，但是我將讓您自己或通過其他後續練習來探索這些內容。</span></span></div>
+<br />Requests 要求 << <a href='Requests 要求.html'>Previous</a> <a href='Cows And Bulls.html'>Next</a> >> Cows And Bulls</div>
         
     <!-- footer -->
       <div class="container">
