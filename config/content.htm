@@ -155,12 +155,16 @@
   <span class="n">r_html</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span></code></pre>
 </figure>
 <p>Now inside the variable<span> </span><code class="highlighter-rouge">r_html</code>, you have the HTML of the page as a string. Reading (otherwise called<span> </span><strong>parsing</strong>) happens with a different Python package.</p>
-<p><span>現在，在變量中</span><code class="highlighter-rouge">r_html</code><span>，您將頁面的HTML作為字符串。讀取（否則稱為</span><strong><span>parsing</span></strong><span>）發生在另一個Python包中。</span></p>
+<p><span>現在，在變量中</span><code class="highlighter-rouge">r_html</code><span>，你將頁面的HTML作為字符串。讀取（否則稱為</span><strong><span>parsing</span></strong><span>）發生在另一個Python包中。</span></p>
 <h3 id="beautifulsoup">BeautifulSoup</h3>
 <p>To solve our problem of parsing (reading, understanding, interpreting) the string of HTML we got from<span> </span><code class="highlighter-rouge">requests</code>, we use the<span> </span><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><code class="highlighter-rouge">BeautifulSoup</code></a><span> </span>library.</p>
+<p><span>為了解決解析（讀取，理解，解釋）從中獲得的HTML字符串的問題</span><code class="highlighter-rouge">requests</code><span><span>，我們使用了</span></span><code class="highlighter-rouge"><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>軟件</code><span><span>庫。</span></span></p>
 <p>What it does is give a<span> </span><em>hierarchical</em><span> </span>(a pyramid structure) to the HTML in the document. If you don’t know anything about HTML, the<span> </span><a href="http://en.wikipedia.org/wiki/HTML">Wikipedia</a><span> </span>article is a good summary. For the purposes of this exercise, you don’t need to know anything about HTML beyond being able to look at it quickly.</p>
+<p><span>它的作用是為文檔中的HTML提供</span><em><span><span>分層結構</span></span></em><span><span>（金字塔結構）。</span><span>如果您對HTML一無所知，請參閱</span></span><a href="http://en.wikipedia.org/wiki/HTML"><span><span>Wikipedia</span></span></a><span><span>文章。</span><span>出於本練習的目的，除了能夠快速查看HTML外，你無需了解其他任何有關HTML的知識。</span></span></p>
 <p>Because<span> </span><code class="highlighter-rouge">BeautifulSoup</code><span> </span>takes care of interpreting our HTML for us, we can ask it things like: “give me all the lines with<span> </span><code class="highlighter-rouge">&lt;p&gt;</code><span> </span>tags” or “find me the parent element to the<span> </span><code class="highlighter-rouge">&lt;title&gt;</code><span> </span>element”, etc.</p>
+<p><span>因為</span><code class="highlighter-rouge">BeautifulSoup</code><span><span>要為我們解釋HTML，所以我們可以提出類似的要求：“給我所有帶</span></span><code class="highlighter-rouge">&lt;p&gt;</code><span><span>標籤</span><span>的行</span><span>”或“為元素找到父</span></span><code class="highlighter-rouge">&lt;title&gt;</code><span><span>元素”.......等等。</span></span></p>
 <p>Your code would look something like this:</p>
+<p><span>您的代碼如下所示：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 
@@ -185,7 +189,7 @@
 <div class="sectionContain">
 <div class="section" id="liquid_cooling">
 <div class="sectionContain">
-<div class="example clearfix"></div>
+<div class="example clearfix"><span>您可以在中進行更多操作</span><code class="highlighter-rouge">BeautifulSoup</code><span><span>，但是我將讓您自己或通過其他後續練習來探索這些內容。</span></span></div>
 </div>
 </div>
 </div>
